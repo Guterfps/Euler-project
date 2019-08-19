@@ -28,24 +28,42 @@ for (let y = 0; y < matrix.length; y++) {
             let sum = row[x] * row[x + 1] * row[x + 2] * row[x + 3]
             if (sum > num) {
                 num = sum
+                
             }
         }
         if (matrix[y + 3] !== undefined) {
             let sum = matrix[y][x] * matrix[y + 1][x] * matrix[y + 2][x] * matrix[y + 3][x]
             if (sum > num) {
                 num = sum
+               
             }
         }
         if (matrix[y + 3] !== undefined && matrix[y + 3][x + 3] !== undefined) {
             let sum = matrix[y][x] * matrix[y + 1][x + 1] * matrix[y + 2][x + 2] * matrix[y + 3][x + 3]
             if (sum > num) {
                 num = sum
+               
             }
         }
         if (matrix[y - 3] !== undefined && matrix[y - 3][x - 3] !== undefined) {
             let sum = matrix[y][x] * matrix[y - 1][x - 1] * matrix[y - 2][x - 2] * matrix[y - 3][x - 3]
             if (sum > num) {
                 num = sum
+                
+            }
+        }
+        if (matrix[y + 3] !== undefined && matrix[y + 3][x - 3] !== undefined) {
+            let sum = matrix[y][x] * matrix[y + 1][x - 1] * matrix[y + 2][x - 2] * matrix[y + 3][x - 3]
+            if (sum > num) {
+                num = sum
+                
+            }
+        }
+        if (matrix[y - 3] !== undefined && matrix[y - 3][x + 3] !== undefined) {
+            let sum = matrix[y][x] * matrix[y - 1][x + 1] * matrix[y - 2][x + 2] * matrix[y - 3][x + 3]
+            if (sum > num) {
+                num = sum
+                
             }
         }
     }
